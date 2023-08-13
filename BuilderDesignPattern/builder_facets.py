@@ -15,7 +15,7 @@ class Person:
             f'Employed at {self.company_name} as a {self.postcode} earning {self.annual_income}'
 
 
-class PersonBuilder:  # facade
+class PersonBuilder:  # facade    Facade pattern acts as a "front door" to a set of functionalities
     def __init__(self, person=None):
         if person is None:
             self.person = Person()
@@ -29,6 +29,8 @@ class PersonBuilder:  # facade
     @property
     def works(self):
         return PersonJobBuilder(self.person)
+    
+    ## This works fine but there is a litle code structure issue with this class is whenever we have another builder to add we have to create entry in PersonBuilder and create new Property inside it which is failing the Open closed principle of SOLID.To resolve this issue we use Builder Inheritance.
 
     def build(self):
         return self.person
