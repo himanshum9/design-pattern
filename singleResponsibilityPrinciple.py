@@ -1,3 +1,4 @@
+# ek class ki ek hi responisibility honi chahie -save,load,load_from_web yh function persistance class main hone chahie taaki we can use it again and again.
 class Journal:
     def __init__(self):
         self.entries = []
