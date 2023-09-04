@@ -43,8 +43,8 @@ class Square(Rectangle):
 def use_it(rc):
     w = rc.width
     rc.height = 10  # unpleasant side effect
-    print(w)
-    print(rc.height)
+    # print(w)
+    # print(rc.height)
     expected = int(w * 10)
     print(f'Expected an area of {expected}, got {rc.area}')
 

@@ -50,7 +50,6 @@ smart_home_thermostats.control_devices()
 
 
 
-
 from abc import abstractmethod
 from enum import Enum
 
